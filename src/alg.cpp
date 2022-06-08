@@ -12,12 +12,12 @@ std::vector<char> getPerm(const Tree& tree, int n) {
     return g;
   }
   g.resize(perm.length(), ' ');
-  int a = 0;
+  int i = 0;
   while (true) {
     if (perm.length() == 0) {
       return g;
     } else {
-      g[a++] = perm[0];
+      g[i++] = perm[0];
       perm.erase(perm.begin());
     }
   }
