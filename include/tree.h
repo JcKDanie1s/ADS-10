@@ -15,7 +15,7 @@ class Tree {
   std::string p[30] = { "" };
   void buildTree(Node*, std::vector<char>);
   void perm(Node*, std::string);
- 
+
  public:
   explicit Tree(std::vector<char> v) {
     root = new Node;
@@ -59,7 +59,8 @@ void Tree::perm(Node* root, std::string s) {
       if (p[z] == "") {
         p[z] = s;
         break;
-      } else {
+      }
+      else {
         ++z;
       }
     }
@@ -72,4 +73,4 @@ void Tree::perm(Node* root, std::string s) {
     perm(root->s[i], s);
   }
 }
-#endif  // INCLUDE_TREE_H_
+#endif // INCLUDE_TREE_H_
